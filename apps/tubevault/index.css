@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: #000000;
+    --color-foreground: #FAFAFA;
+    --color-surface: #18181b;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-accent: #7c3aed;
+    --color-muted: #a1a1aa;
+
+    --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-display: 'Climate Crisis', cursive;
+}
+
+@layer base {
+    body {
+        background-color: #000000;
+        background-image:
+            radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.15) 0px, transparent 50%),
+            radial-gradient(at 100% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+            radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
+            radial-gradient(at 0% 100%, rgba(34, 197, 94, 0.15) 0px, transparent 50%);
+        background-attachment: fixed;
+        background-size: cover;
+        color: var(--color-foreground);
+        @apply antialiased font-sans selection:bg-accent/30 selection:text-white;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-bold tracking-tight;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+@layer components {
+    .glass {
+        @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl;
+    }
+
+    .btn-primary {
+        @apply bg-white text-black px-4 py-2 text-sm font-bold hover:bg-zinc-200 transition-all duration-200 rounded-lg shadow-lg hover:shadow-xl hover:scale-[1.02];
+    }
+
+    .btn-secondary {
+        @apply bg-white/5 border border-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition-all duration-200 rounded-lg backdrop-blur-sm;
+    }
+
+    .input-field {
+        @apply bg-black/30 border border-white/10 py-2 px-3 text-sm focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-white/10 w-full placeholder-white/30 rounded-lg transition-all duration-200 backdrop-blur-md text-white;
+    }
+
+    .nav-item {
+        @apply px-4 py-3 text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 rounded-lg cursor-pointer flex items-center gap-3 justify-start text-left;
+    }
+
+    .nav-item-active {
+        @apply bg-purple-500/20 text-white shadow-inner font-bold border border-purple-500/30 backdrop-blur-md;
+        box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+    }
+}
