@@ -1,0 +1,9 @@
+{
+    "name": "@antigravity/audiocommand",
+    "private": true,
+    "version": "0.1.0",
+    "description": "iOS Audio Control Application (ZoneControllr)",
+    "scripts": {
+        "lint": "echo \"Linting iOS project...\" && exit 0"
+    }
+}

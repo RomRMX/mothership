@@ -1,8 +1,11 @@
 import Dashboard from './components/Dashboard';
+import PasswordGate from './components/PasswordGate';
 
 function App() {
   return (
-    <Dashboard />
+    <PasswordGate>
+      <Dashboard />
+    </PasswordGate>
   );
 }
 
