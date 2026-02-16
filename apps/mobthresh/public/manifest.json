@@ -1,0 +1,27 @@
+{
+    "id": "com.antigravity.autothresh",
+    "name": "AutoThresh Pro",
+    "version": "1.0.0",
+    "main": "index.html",
+    "host": [
+        {
+            "app": "PS",
+            "minVersion": "23.0.0"
+        }
+    ],
+    "manifestVersion": 5,
+    "entrypoints": [
+        {
+            "type": "panel",
+            "id": "autothreshPanel",
+            "label": "AutoThresh Pro",
+            "minWidth": 300,
+            "minHeight": 400,
+            "maxWidth": 800,
+            "maxHeight": 1200
+        }
+    ],
+    "requiredPermissions": {
+        "localFileSystem": "fullAccess"
+    }
+}

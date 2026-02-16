@@ -1,0 +1,95 @@
+.at-threshold-controls {
+    border: none;
+    background: transparent;
+}
+
+.at-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+    background: #111;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.at-tabs .tab {
+    flex: 1;
+    font-size: 11px;
+    padding: 4px;
+    color: #666;
+    background: transparent;
+}
+
+.at-tabs .tab.active {
+    background: #222;
+    color: #ccc;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+
+.at-channels-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.at-channel-row-container {
+    background: #151515;
+    border: 1px solid #222;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.at-channel-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.at-expand-btn {
+    font-size: 8px;
+    padding: 2px 4px;
+    height: auto;
+    width: auto;
+    transition: transform 0.2s;
+}
+
+.at-expand-btn.expanded {
+    transform: rotate(-90deg);
+}
+
+.at-channel-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    flex: 1;
+    text-align: center;
+}
+
+.at-channel-details {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #222;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.detail-row label {
+    font-size: 10px;
+    color: #666;
+    width: 30px;
+}
+
+.at-footer-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+    margin-top: 16px;
+}

@@ -1,0 +1,27 @@
+.at-image-controls {
+    border: none;
+    background: transparent;
+}
+
+.at-pattern-toggle-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 4px;
+    background: #111;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+.at-theme-toggles {
+    display: flex;
+    background: #222;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.at-theme-toggles button.active {
+    background: #eee;
+    color: #000;
+}

@@ -1,0 +1,42 @@
+.app-container {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.at-back-link {
+    margin-bottom: 12px;
+    text-align: left;
+    color: #666;
+}
+
+.at-plugin-panel {
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    padding-bottom: 16px;
+}
+
+.at-scroller {
+    padding: 0 12px;
+}
+
+.at-preview-area {
+    padding: 12px;
+    background: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    margin-bottom: 8px;
+}
+
+.at-canvas-wrapper canvas {
+    border: 1px solid #333;
+    max-width: 100%;
+    height: auto;
+}

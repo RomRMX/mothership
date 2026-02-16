@@ -1,0 +1,53 @@
+.at-section {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+    border-radius: 6px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.at-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--border-color);
+    user-select: none;
+}
+
+.at-section-header--collapsible {
+    cursor: pointer;
+}
+
+.at-section-header--collapsible:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.at-section-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.at-section-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.at-chevron {
+    font-size: 8px;
+    transition: transform 0.2s;
+    color: #666;
+}
+
+.at-chevron.open {
+    transform: rotate(180deg);
+}
+
+.at-section-content {
+    padding: 12px;
+}
