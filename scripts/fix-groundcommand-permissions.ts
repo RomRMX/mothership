@@ -18,15 +18,15 @@ async function fixPermissions() {
         await client.connect();
 
         // 1. Grant Usage on Schema
-        await client.query('GRANT USAGE ON SCHEMA "territory" TO postgres, anon, authenticated, service_role;');
+        await client.query('GRANT USAGE ON SCHEMA "groundcommand" TO postgres, anon, authenticated, service_role;');
         console.log('✅ Granted USAGE on schema.');
 
         // 2. Grant Table Permissions
-        await client.query('GRANT ALL ON ALL TABLES IN SCHEMA "territory" TO postgres, anon, authenticated, service_role;');
+        await client.query('GRANT ALL ON ALL TABLES IN SCHEMA "groundcommand" TO postgres, anon, authenticated, service_role;');
         console.log('✅ Granted ALL on existing tables.');
 
         // 3. Grant Future Table Permissions (Optional but good)
-        await client.query('ALTER DEFAULT PRIVILEGES IN SCHEMA "territory" GRANT ALL ON TABLES TO postgres, anon, authenticated, service_role;');
+        await client.query('ALTER DEFAULT PRIVILEGES IN SCHEMA "groundcommand" GRANT ALL ON TABLES TO postgres, anon, authenticated, service_role;');
         console.log('✅ Granted Default Privileges.');
 
     } catch (err: any) {

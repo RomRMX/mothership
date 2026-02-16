@@ -2,7 +2,7 @@ import { Client } from 'pg';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const schemas = ['rmxlabs', 'tubevault', 'trakkindemdollaz', 'rackstack2'];
+const schemas = ['rmxlabs', 'tubevault', 'trakkindemdollaz', 'rackstack'];
 const password = process.env.VITE_SUPABASE_PW || 'QbjbxRcGtxatlTkV';
 const projectRef = 'zfdwaapcaozrhjpafzmc';
 

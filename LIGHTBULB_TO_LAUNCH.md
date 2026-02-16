@@ -8,7 +8,7 @@ This guide defines the "Mothership Way" to take a raw idea and turn it into a pr
 
 Before touching code, define the **Core Loop** and the **Namespace**.
 
-1. **Name your Namespace**: Every project in the Mothership needs a unique, lowercase slug (e.g., `territory`, `tubevault`).
+1. **Name your Namespace**: Every project in the Mothership needs a unique, lowercase slug (e.g., `groundcommand`, `tubevault`).
 2. **Define the Core Loop**: What is the one thing this app does? (e.g., "Manage service territories on a map").
 3. **Plan the Schema**: Sketch out your tables. In the Mothership, we don't dump everything into `public`. We give every app its own private room (a Postgres Schema).
 
@@ -111,7 +111,7 @@ If you are asking an AI agent (like me) to build the app for you:
 
 ## 🛰️ The "Mothership Sync" (Working Across Devices)
 
-To continue working on a project like `territory` or `tubevault` on your laptop, follow this workflow:
+To continue working on a project like `groundcommand` or `tubevault` on your laptop, follow this workflow:
 
 1. **Clone the Repo**:
     On your laptop, clone the project from GitHub:

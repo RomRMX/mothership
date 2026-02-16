@@ -20,7 +20,7 @@ if (!DEST_CONNECTION_STRING) {
 async function migrate() {
     console.log('--- Territory Migration Started ---');
     console.log('Source:', SOURCE_CONFIG.host);
-    console.log('Target Schema: territory');
+    console.log('Target Schema: groundcommand');
 
     const source = new Client({
         connectionString: `postgresql://${SOURCE_CONFIG.user}:${SOURCE_CONFIG.password}@${SOURCE_CONFIG.host}:${SOURCE_CONFIG.port}/postgres`,
@@ -37,14 +37,14 @@ async function migrate() {
         console.log('✅ Connected to both databases.');
 
         // 1. Create Schema
-        await dest.query('CREATE SCHEMA IF NOT EXISTS "territory";');
-        console.log('✅ Schema "territory" ensured.');
+        await dest.query('CREATE SCHEMA IF NOT EXISTS "groundcommand";');
+        console.log('✅ Schema "groundcommand" ensured.');
 
         // 2. Create Tables
 
         // Clients
         await dest.query(`
-            CREATE TABLE IF NOT EXISTS "territory"."clients" (
+            CREATE TABLE IF NOT EXISTS "groundcommand"."clients" (
                 "id" text PRIMARY KEY,
                 "name" text,
                 "city" text,
@@ -62,14 +62,14 @@ async function migrate() {
 
         // Tasks
         await dest.query(`
-            CREATE TABLE IF NOT EXISTS "territory"."tasks" (
+            CREATE TABLE IF NOT EXISTS "groundcommand"."tasks" (
                 "id" text PRIMARY KEY,
                 "title" text,
                 "description" text,
                 "priority" text,
                 "card_type" text,
                 "stage_id" text,
-                "client_id" text REFERENCES "territory"."clients"("id"),
+                "client_id" text REFERENCES "groundcommand"."clients"("id"),
                 "color" text,
                 "position" integer,
                 "created_at" timestamptz,
@@ -87,7 +87,7 @@ async function migrate() {
         let clientCount = 0;
         for (const row of clientsRes.rows) {
             await dest.query(`
-                INSERT INTO "territory"."clients" 
+                INSERT INTO "groundcommand"."clients" 
                 (id, name, city, state, revenue, lat, lng, details, updated_at, last_interaction_at)
                 VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
                 ON CONFLICT (id) DO NOTHING
