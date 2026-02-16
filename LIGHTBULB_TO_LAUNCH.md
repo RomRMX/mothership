@@ -107,4 +107,40 @@ If you are asking an AI agent (like me) to build the app for you:
 2. Hand them the **Core Loop** description.
 3. Show them this guide and **AGENTS.md**.
 
+---
+
+## 🛰️ The "Mothership Sync" (Working Across Devices)
+
+To continue working on a project like `territory` or `tubevault` on your laptop, follow this workflow:
+
+1. **Clone the Repo**:
+    On your laptop, clone the project from GitHub:
+
+    ```bash
+    git clone https://github.com/RomRMX/mothership.git
+    cd mothership
+    ```
+
+2. **Install Dependencies**:
+
+    ```bash
+    npm install
+    ```
+
+3. **Check Environment Variables**:
+    Copy `.env.example` to `.env` and ensure your `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are present.
+
+4. **Iterate & Push**:
+    As you work on your laptop, use the **Push-to-Deploy** strategy:
+    - Create a branch: `git checkout -b feature/laptop-updates`
+    - Commit and push: `git push origin feature/laptop-updates`
+    - **Verify**: Check the Vercel Preview URL directly on your laptop (or phone!) to see the changes.
+
+5. **Sync Back**:
+    When you're back on your main desktop, just run:
+
+    ```bash
+    git pull origin main
+    ```
+
 **Ready to start? Tell me your lightbulb idea!**
