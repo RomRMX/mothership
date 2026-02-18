@@ -1,0 +1,15 @@
+{
+    "short_name": "BellyFiller",
+    "name": "BellyFiller: Vegas Food Discovery",
+    "icons": [
+        {
+            "src": "vite.svg",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#1a1a1a",
+    "background_color": "#1a1a1a"
+}
