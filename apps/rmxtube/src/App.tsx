@@ -84,11 +84,11 @@ function PlaylistCard({
       <div className="playlist-header" onClick={() => toggleExpand(id)}>
         <div className="playlist-title-group">
           <div className="playlist-drag-handle" onMouseDown={(e) => e.stopPropagation()}>
-            <GripVertical size={16} />
+            <GripVertical size={14} />
           </div>
           {icon}
-          {name}
-          <span className="column-count">{videos.length}</span>
+          <span className="playlist-title-text">{name}</span>
+          <span className="column-count" style={{ flexShrink: 0 }}>{videos.length}</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <button
